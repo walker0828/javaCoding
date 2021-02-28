@@ -13,7 +13,7 @@ public class MinHeap {
 
     }
 
-    private void hefipyHea()
+    private void hefipyHeap(){}
 
     public void buildMaxHeap() {
 

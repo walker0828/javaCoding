@@ -1,11 +1,13 @@
-public class LazySinleton {
-     private static volatile Sinleton instance = null;
+package com.example.javacoding.designs.CreationalPatterns.Sinleton;
 
-     private LazySinleton() {}
+public class LazySingleton {
+     private static volatile LazySingleton instance = null;
 
-     public static synchronized LazySinleton getInstance() {
+     private LazySingleton() {}
+
+     public static synchronized LazySingleton getInstance() {
          if(instance == null) {
-             instance = new LazySinleton();
+             instance = new LazySingleton();
          }
          return instance;
      }

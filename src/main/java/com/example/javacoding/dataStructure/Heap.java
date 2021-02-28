@@ -1,7 +1,7 @@
 package com.example.javacoding.dataStructure;
 
 public class Heap {
-    private int[] items = new int[];
+    private int[] items = new int[]{};
     private int count;
     private int n;
 
@@ -15,7 +15,6 @@ public class Heap {
         if(count >= n) {
             return;
         }
-        if()
     }
 
     // 实现一个小顶堆
@@ -26,17 +25,17 @@ public class Heap {
     }
 
     private void heapifyMinHeap(int i) {
-        int l = left(i);
-        int r = right(i);
-
-        int smallest = i;
-        if(l< items.length && data[l] < data[i]) {
-            smallest = l;
-        }
-
-        if(r< items.length && data[r] < data[i]) {
-            smallest = l;
-        }
+//        int l = left(i);
+//        int r = right(i);
+//
+//        int smallest = i;
+//        if(l< items.length && data[l] < data[i]) {
+//            smallest = l;
+//        }
+//
+//        if(r< items.length && data[r] < data[i]) {
+//            smallest = l;
+//        }
     }
 
     // 实现一个大顶堆

@@ -6,7 +6,6 @@ public class DoubleLinkList {
     public Node current;
 
     public void add(int data) {
-        if(data == null)
     }
 
     public int getLength(Node head) {
@@ -23,7 +22,7 @@ public class DoubleLinkList {
     }
 
     public boolean isEmpty() {
-        return head
+        return head.data == 0 ? true : false;
     }
 
     class Node {

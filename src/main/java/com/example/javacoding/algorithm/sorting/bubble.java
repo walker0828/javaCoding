@@ -3,9 +3,6 @@ package com.example.javacoding.algorithm.sorting;
 import java.util.Arrays;
 
 class bubble {
-    public static void main(String[] args){
-        
-    }
     /**
      * 时间复杂度 n2
      * 空间复杂度
@@ -13,11 +10,9 @@ class bubble {
      * */
 
     public int[] bubbleSort(int[] source){
-        int [] arr = Arrays.copyOf(source,source.length);
-
+        int[] arr = Arrays.copyOf(source,source.length);
         for(int i =1; i < source.length ; i++) {
             boolean flag = true;
-            String
             for(int j = 0; j< source.length - 1; j++){
                 if (arr[j] < arr[j+1]) {
                     int tmp = arr[j];

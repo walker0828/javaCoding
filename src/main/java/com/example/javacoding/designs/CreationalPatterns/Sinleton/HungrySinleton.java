@@ -1,5 +1,7 @@
+package com.example.javacoding.designs.CreationalPatterns.Sinleton;
+
 public class HungrySinleton {
-    private static final HungrySingleton intance = new HungrySinleton();
+    private static final HungrySinleton intance = new HungrySinleton();
 
     private HungrySinleton() {}
 

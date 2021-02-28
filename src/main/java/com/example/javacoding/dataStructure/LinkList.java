@@ -5,9 +5,9 @@ public class LinkList {
     public Node current;
 
     public void add(int data) {
-        if(data == null){
-            return;
-        }
+//        if(data == null){
+//            return;
+//        }
 
         Node node = new Node(data);
         current.next = node;
@@ -18,15 +18,15 @@ public class LinkList {
         if(head == null) {
             return 0;
         }
-
+        return 0;
     }
 
     public Node getPosition(int index) {
-
+        return null;
     }
 
     public Node getMiddleNode() {
-
+        return null;
     }
 
     class Node {
