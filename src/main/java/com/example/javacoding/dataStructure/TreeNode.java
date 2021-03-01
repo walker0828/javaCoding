@@ -2,6 +2,8 @@ package com.example.javacoding.dataStructure;
 
 import org.springframework.stereotype.Component;
 
+import java.util.Vector;
+
 @Component
 public class TreeNode {
     public TreeNode left, right;
@@ -23,6 +25,8 @@ public class TreeNode {
             System.out.println(node.val);
             preTraverse(node.left);
             preTraverse(node.right);
+        }else {
+            System.out.println("#");
         }
     }
 
@@ -35,6 +39,7 @@ public class TreeNode {
     }
 
     public void postTraverse(TreeNode node) {
+        Vector<String> ss = new Vector<>();
         if(node != null) {
             postTraverse(node.left);
             postTraverse(node.right);
@@ -43,7 +48,17 @@ public class TreeNode {
     }
 
     //DFS depth
-    public void dfs() {
+    public void dfs(TreeNode node) {
+
+    }
+
+    //BFS depth
+    public void bfs(TreeNode node) {
+
+    }
+
+    //zigzag depth
+    public void zig(TreeNode node) {
 
     }
 }
