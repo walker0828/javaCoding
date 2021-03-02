@@ -1,10 +1,7 @@
 package com.example.javacoding.dataStructure;
 
-import org.springframework.stereotype.Component;
-
 import java.util.Vector;
 
-@Component
 public class TreeNode {
     public TreeNode left, right;
 
@@ -47,9 +44,15 @@ public class TreeNode {
         }
     }
 
-    //DFS depth
+    //DFS depth （迭代）
     public void dfs(TreeNode node) {
-
+        if(node != null) {
+            System.out.println(node.val);
+            preTraverse(node.left);
+            preTraverse(node.right);
+        }else{
+            System.out.println("#");
+        }
     }
 
     //BFS depth
