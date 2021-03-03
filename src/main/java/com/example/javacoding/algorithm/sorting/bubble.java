@@ -10,22 +10,16 @@ class bubble {
      * */
     public int[] bubbleSort(int[] source){
         int[] arr = Arrays.copyOf(source,source.length);
-        for(int i =1; i < source.length ; i++) {
-            boolean flag = true;
-            for(int j = 0; j< source.length - 1; j++){
-                if (arr[j] < arr[j+1]) {
-                    int tmp = arr[j];
-                    arr[j] = arr[j+1];
-                    arr[j+1] = tmp;
-                    flag = true;
-                }
-            }
-
-            if(flag) {
-                break;
+        for(int i=0; i< source.length;i++) {
+            for(int j= 1; j < source.length;j++){
+//                swap(arr[],arr[],tmep);
             }
         }
-        return arr;
+        return null;
+    }
+
+    private void swap(int i, int j, int tmmp) {
+
     }
 
     public void main(String[] args) {
