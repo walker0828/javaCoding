@@ -8,7 +8,6 @@ class bubble {
      * 空间复杂度
      * 在输入已经是正序的时候最快，输入的数据都是反序的时候最慢
      * */
-
     public int[] bubbleSort(int[] source){
         int[] arr = Arrays.copyOf(source,source.length);
         for(int i =1; i < source.length ; i++) {
@@ -18,7 +17,6 @@ class bubble {
                     int tmp = arr[j];
                     arr[j] = arr[j+1];
                     arr[j+1] = tmp;
-
                     flag = true;
                 }
             }
@@ -28,5 +26,9 @@ class bubble {
             }
         }
         return arr;
+    }
+
+    public void main(String[] args) {
+        System.out.println("");
     }
 }
