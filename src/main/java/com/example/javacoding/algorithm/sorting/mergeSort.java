@@ -1,5 +1,6 @@
 package com.example.javacoding.algorithm.sorting;
 
+// 将未排序的队列
 public class mergeSort {
     public static void mergeSort(int[] arr) {
         int[] temp = new int[arr.length];
