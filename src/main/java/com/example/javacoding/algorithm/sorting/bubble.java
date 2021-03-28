@@ -9,17 +9,22 @@ class bubble {
      * 在输入已经是正序的时候最快，输入的数据都是反序的时候最慢
      * */
     public int[] bubbleSort(int[] source){
+
         int[] arr = Arrays.copyOf(source,source.length);
-        for(int i=0; i< source.length;i++) {
-            for(int j= 1; j < source.length;j++){
-//                swap(arr[],arr[],tmep);
+        for(int i=0; i< source.length -1 ;i++) {
+            for(int j= 0; j < source.length - 1 -i;j++){
+                if( arr[i] < arr[j]) {
+                    swap(arr[i],arr[j]);
+                }
             }
         }
-        return null;
+        return arr;
     }
 
-    private void swap(int i, int j, int tmmp) {
-
+    private void swap(int i, int j) {
+        int temp = i;
+        i = j;
+        j = i;
     }
 
     public void main(String[] args) {
