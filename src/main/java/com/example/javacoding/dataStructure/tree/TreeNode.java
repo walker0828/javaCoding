@@ -1,7 +1,8 @@
-package com.example.javacoding.dataStructure;
+package com.example.javacoding.dataStructure.tree;
 
-import sun.reflect.generics.tree.Tree;
-
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Stack;
 import java.util.Vector;
 
 public class TreeNode {
@@ -29,7 +30,20 @@ public class TreeNode {
         }
     }
 
-    public void nonRecPreTraverse(TreeNode node) {
+    public List<Integer> nonRecPreTraverse(TreeNode root) {
+        List<Integer> resultList = new ArrayList<>();
+        Stack<TreeNode> stack = new Stack<>();
+        if(root == null) {
+            return resultList;
+        }
+        stack.push(root);
+        while(!stack.isEmpty()) {
+            TreeNode tempNode = stack.pop();
+            resultList.add(tempNode.val);
+            stack.push(root.right);
+            stack.push(root.left);
+        }
+        return resultList;
     }
 
     public void inTraverse(TreeNode node) {
@@ -40,7 +54,18 @@ public class TreeNode {
         }
     }
 
-    public void nonRecInTraverse(TreeNode node) {
+    public List<Integer> nonRecInTraverse(TreeNode root) {
+        List<Integer> resultList = new ArrayList<>();
+        Stack<TreeNode> treeNodes = new Stack<>();
+        if(root == null) return resultList;
+        treeNodes.push(root);
+        if(!treeNodes.isEmpty()) {
+//            TreeNode treeTemp = treeNodes.pop();
+//            treeNodes.push(treeTemp.right);
+//            resultList.add(treeTemp.val);
+//            treeNodes.push(treeTemp.left);
+        }
+        return resultList;
     }
 
     public void postTraverse(TreeNode node) {
@@ -52,7 +77,8 @@ public class TreeNode {
         }
     }
 
-    public void nonRecPostTraverse(TreeNode node) {
+    public List<Integer> nonRecPostTraverse(TreeNode node) {
+        return null;
     }
 
     //DFS depth （迭代）
@@ -66,7 +92,7 @@ public class TreeNode {
         }
     }
 
-    //BFS depth
+    //BFS depth (迭代)
     public void bfs(TreeNode node) {
 
     }
