@@ -7,7 +7,7 @@ public class DoubleLinkNode{
     public int data;
 
     DoubleLinkNode(int val) {
-
+        this.data = val;
     }
 
 }

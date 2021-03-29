@@ -5,8 +5,6 @@ import com.example.javacoding.dataStructure.tree.BinaryTreeInfo;
 // 二叉搜索树
 public class BinarySearchTree<E> implements BinaryTreeInfo {
 
-
-
     @Override
     public Object root() {
         return null;

@@ -4,12 +4,18 @@ import java.util.Arrays;
 
 // 平均时间复杂度 O(nlogn)
 public class heap {
-    public static void heap(int[] sourceArray) {
+    public static int[] heap(int[] sourceArray) {
         int[] arr = Arrays.copyOf(sourceArray, sourceArray.length);
         // 构建 最大堆
         int len = arr.length;
         buildMaxHeap(arr,len);
-        System.out.println("end");
+        for (int i = len - 1; i > 0; i--) {
+            swap(arr, 0, i);
+            len--;
+            heapify(arr, 0, len);
+        }
+        System.out.println(arr);
+        return arr;
     }
 
     private static void buildMaxHeap(int[] arr, int len) {
