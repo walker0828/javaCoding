@@ -5,6 +5,11 @@ import java.util.List;
 import java.util.Stack;
 import java.util.Vector;
 
+/***
+ *
+ * 二叉树
+ */
+
 public class TreeNode {
     public TreeNode left, right;
 

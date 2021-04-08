@@ -36,7 +36,6 @@ public class BinarySearchTree<E> implements BinaryTreeInfo {
 
     }
 
-
     protected Node<E> createNode(E element,Node<E> parent) {
         return new Node<>(element,parent);
     }
@@ -45,6 +44,34 @@ public class BinarySearchTree<E> implements BinaryTreeInfo {
         if(isNull(element)) {
             throw new IllegalArgumentException("element must not be null");
         }
+    }
+
+    public static class Node<E> {
+        E element;
+        Node<E> left;
+        Node<E> right;
+        Node<E> parent;
+
+        public Node(E element,Node<E> parent) {
+            this(element);
+            this.parent = parent;
+        }
+
+        public Node(E element) {
+            this.element = element;
+        }
+
+        boolean isLeftChildOf(Node node) {
+            return this == node.left;
+        }
+    }
+
+    protected void afterAdd(Node<E> node) {
+
+    }
+
+    protected void afterRemoved(Node<E> node) {
+
     }
 
     @Override
