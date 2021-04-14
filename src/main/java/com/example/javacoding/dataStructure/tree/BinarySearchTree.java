@@ -1,6 +1,5 @@
 package com.example.javacoding.dataStructure.tree;
 
-import com.example.javacoding.dataStructure.Node;
 import com.example.javacoding.dataStructure.tree.BinaryTreeInfo;
 
 import java.awt.*;
@@ -92,5 +91,33 @@ public class BinarySearchTree<E> implements BinaryTreeInfo {
     @Override
     public Object string(Object node) {
         return null;
+    }
+
+    protected static class Node<E> {
+        E element;
+
+        Node<E> parent;
+        Node<E> left;
+        Node<E> right;
+
+        public Node(E element,Node<E> parent) {
+            this(element);
+            this.parent = parent;
+        }
+
+        public Node(E element) {
+            this.element = element;
+        }
+
+        boolean isLeftChildOf(Node node) {
+            return this == node.left;
+        }
+
+        @Override
+        public String toString() {
+            return "Node{" +
+                    "element=" + element +
+                    '}';
+        }
     }
 }
