@@ -45,25 +45,25 @@ public class BinarySearchTree<E> implements BinaryTreeInfo {
         }
     }
 
-    public static class Node<E> {
-        E element;
-        Node<E> left;
-        Node<E> right;
-        Node<E> parent;
-
-        public Node(E element,Node<E> parent) {
-            this(element);
-            this.parent = parent;
-        }
-
-        public Node(E element) {
-            this.element = element;
-        }
-
-        boolean isLeftChildOf(Node node) {
-            return this == node.left;
-        }
-    }
+//    public static class Node<E> {
+//        E element;
+//        Node<E> left;
+//        Node<E> right;
+//        Node<E> parent;
+//
+//        public Node(E element,Node<E> parent) {
+//            this(element);
+//            this.parent = parent;
+//        }
+//
+//        public Node(E element) {
+//            this.element = element;
+//        }
+//
+//        boolean isLeftChildOf(Node node) {
+//            return this == node.left;
+//        }
+//    }
 
     protected void afterAdd(Node<E> node) {
 

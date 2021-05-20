@@ -1,7 +1,11 @@
 package com.example.javacoding.dataStructure.list;
 
 public class LinkedList<E> extends AbstractList<E>{
+    public Node<E> head;
 
+    public LinkedList() {
+        head = new Node(null,null);
+    }
 
     @Override
     public void add(E e) {
@@ -57,4 +61,17 @@ public class LinkedList<E> extends AbstractList<E>{
     /**
      * 求链表的中间结点
      */
+
+    private static class Node<E> {
+        E       val;
+        Node<E> next;
+
+        public Node() {
+        }
+
+        public Node(E val, Node<E> next) {
+            this.val = val;
+            this.next = next;
+        }
+    }
 }

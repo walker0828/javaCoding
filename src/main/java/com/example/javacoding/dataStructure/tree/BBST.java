@@ -28,7 +28,7 @@ public class BBST<E> extends BinarySearchTree<E> {
 
     }
 
-    protected void rotate() {
+    protected void rotate(Node r, Node a, Node b, Node c, Node d, Node e, Node f, Node g) {
 
     }
 

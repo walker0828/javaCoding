@@ -5,7 +5,6 @@ public class ArrayList<E> extends AbstractList<E> {
     @Override
     public void add(E e) {
 
-
     }
 
     @Override
