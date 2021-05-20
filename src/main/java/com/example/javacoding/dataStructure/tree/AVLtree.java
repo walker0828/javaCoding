@@ -6,14 +6,19 @@ public class AVLtree<E> extends BBST{
         while((node = node.parent) == null) {
             if(((AVLNode)node).isBalanced()){
                 updateHeight(node);
+            }else{
+                rebalance(node);
+                break;
             }
         }
     }
 
     @Override
-    protected void afterRemoved(Node node) {
+    protected void afterRemove(Node node, Node replacement) {
         while((node = node.parent) == null) {
+            if(isBalanced(node)) {
 
+            }
         }
     }
 
@@ -22,7 +27,13 @@ public class AVLtree<E> extends BBST{
     }
 
     private void rebalance(Node<E> node) {
+        AVLNode grand = (AVLNode) node;
 
+
+    }
+
+    protected boolean isBalanced(Node<E> node) {
+        return ((AVLNode)node).isBalanced();
     }
 
     @Override
@@ -67,4 +78,6 @@ public class AVLtree<E> extends BBST{
             return balanceFactor() <= 1;
         }
     }
+
+
 }

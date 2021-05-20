@@ -19,8 +19,9 @@ public class BBST<E> extends BinarySearchTree<E> {
     }
 
     protected void rotateRight(Node<E> node) {
-        Node<E> child = node.right;
-
+        Node<E> child = node.left;
+        node.left = child.right;
+        child.right = node;
         afterRotate(node,child);
     }
 
@@ -28,7 +29,7 @@ public class BBST<E> extends BinarySearchTree<E> {
 
     }
 
-    protected void rotate(Node r, Node a, Node b, Node c, Node d, Node e, Node f, Node g) {
+    protected void rotate(Node<E> r,Node<E> a,Node<E> b,Node<E> c,Node<E> d,Node<E> e,Node<E> f,Node<E> g) {
 
     }
 
